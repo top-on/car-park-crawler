@@ -1,5 +1,10 @@
 # SCRAPE MUENSTER PARKLEITSYSTEM AND RETRIEVE FREE SPOTS
 
+# import flask
+from flask import Flask
+app = Flask(__name__)
+
+# crawl website
 def getFreeSpots():
     # GET HTML
     import urllib.request
@@ -17,6 +22,7 @@ def getFreeSpots():
     return results
 
 # CONVERT LIST TO JSON
+@app.route("/")
 def getJson():
     results = getFreeSpots()
     names = [x[0] for x in results]
@@ -24,6 +30,8 @@ def getJson():
     final = [{'name': name, 'free_spots': free_spots} for name, free_spots in zip(names, free_spots)]
     import json
     j = json.dumps(final, ensure_ascii=False)
+    print(j)
     return j
 
-print(getJson())
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
