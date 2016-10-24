@@ -36,6 +36,48 @@ osm_feature_lookup = {
           51.9660696
         ]
       }
+    },
+    "PH Münster Arkaden": {
+      "type": "Feature",
+      "id": "node/409003589",
+      "properties": {
+        "@id": "node/409003589",
+        "amenity": "parking",
+        "capacity": "700",
+        "fee": "yes",
+        "name": "Parkhaus Münster Arkaden",
+        "parking": "underground",
+        "website": "http://www.stadt-muenster.de/parkhaeuser/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.6264224,
+          51.9598748
+        ]
+      }
+    },
+    "PH Karstadt": {
+      "type": "Feature",
+      "id": "node/496190360",
+      "properties": {
+        "@id": "node/496190360",
+        "amenity": "parking",
+        "capacity": "183",
+        "fee": "yes",
+        "name": "Parkhaus Karstadt",
+        "parking": "underground",
+        "website": "http://www.stadt-muenster.de/parkhaeuser/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.6302721,
+          51.9607274
+        ]
+      }
     }
 }
 
