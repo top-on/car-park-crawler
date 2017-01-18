@@ -21,9 +21,9 @@ osm_feature_lookup = {
       "properties": {
         "@id": "node/68293849",
         "amenity": "parking",
-        "capacity": "793",
-        "capacity:disabled": "10",
-        "capacity:women": "46",
+        "capacity": 793,
+        "capacity:disabled": 10,
+        "capacity:women": 46,
         "name": "Theaterparkhaus",
         "parking": "underground",
         "toilets:wheelchair": "yes",
@@ -43,7 +43,7 @@ osm_feature_lookup = {
       "properties": {
         "@id": "node/409003589",
         "amenity": "parking",
-        "capacity": "700",
+        "capacity": 700,
         "fee": "yes",
         "name": "Parkhaus Münster Arkaden",
         "parking": "underground",
@@ -64,7 +64,7 @@ osm_feature_lookup = {
       "properties": {
         "@id": "node/496190360",
         "amenity": "parking",
-        "capacity": "183",
+        "capacity": 183,
         "fee": "yes",
         "name": "Parkhaus Karstadt",
         "parking": "underground",
@@ -84,11 +84,11 @@ osm_feature_lookup = {
 @app.route("/")
 def scrape():
 
-    def json_lines():
-        r = requests.get('http://www.stadt-muenster.de/tiefbauamt/parkleitsystem')
-        pattern = '(?P<name>[\w\s]+)</a>\s+</td>\s+<td class="freeCount\"\>(?P<free>[\d]+)\<\/td\>'
-        for match in re.finditer(pattern, r.text):
-            yield json.dumps(match.groupdict(), ensure_ascii=False) + '\n'
+    # def json_lines():
+    #     r = requests.get('http://www.stadt-muenster.de/tiefbauamt/parkleitsystem')
+    #     pattern = '(?P<name>[\w\s]+)</a>\s+</td>\s+<td class="freeCount\"\>(?P<free>[\d]+)\<\/td\>'
+    #     for match in re.finditer(pattern, r.text):
+    #         yield json.dumps(match.groupdict(), ensure_ascii=False) + '\n'
 
     def geojson_lines():
         r = requests.get('http://www.stadt-muenster.de/tiefbauamt/parkleitsystem')
@@ -109,7 +109,7 @@ def scrape():
             })
             yield json.dumps(geojson, ensure_ascii=False) + '\n'
 
-    return Response(geojson_lines(), mimetype='text/json')
+    return Response(geojson_lines(), mimetype='application/json')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
