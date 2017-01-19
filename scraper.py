@@ -31,10 +31,7 @@ osm_feature_lookup = {
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          7.6265355,
-          51.9660696
-        ]
+        "coordinates": [7.6265355, 51.9660696]
       }
     },
     "PH Münster Arkaden": {
@@ -52,10 +49,7 @@ osm_feature_lookup = {
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          7.6264224,
-          51.9598748
-        ]
+        "coordinates": [7.6264224, 51.9598748]
       }
     },
     "PH Karstadt": {
@@ -73,12 +67,56 @@ osm_feature_lookup = {
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          7.6302721,
-          51.9607274
-        ]
+        "coordinates": [7.6302721, 51.9607274]
       }
-    }
+    },
+    "PH Bahnhofstraße": {
+      "type": "Feature",
+      "id": "node/387828680",
+      "properties": {
+        "@id": "node/387828680",
+        "amenity": "parking",
+        "capacity": 339,
+        "capacity:disabled": 10,
+        "fee": "yes",
+        "name": "Parkhaus Bahnhofstraße",
+        "parking": "multi-storey",
+        "website": "http://www.stadt-muenster.de/parkhaeuser/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6333055, 51.9556612]
+      }
+    },
+    "PH Cineplex": {
+      "type": "Feature",
+      "id": "way/136053679",
+      "properties": {
+        "@id": "way/136053679",
+        "access": "public",
+        "addr:housenumber": "10",
+        "addr:street": "Lippstädter Straße",
+        "amenity": "parking",
+        "building": "yes",
+        "building:levels": 7,
+        "capacity": 590,
+        "capacity:disabled": "yes",
+        "fee": "yes",
+        "lit": "yes",
+        "maxheight": 2,
+        "name": "Parkhaus Cineplex",
+        "opening_hours": "24/7",
+        "operator": "Ruhr-Park Parkhausbetriebsgesellschaft",
+        "parking": "multi-storey",
+        "surface": "asphalt",
+        "website": "http://www.stadt-muenster.de/tiefbauamt/parkleitsystem/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6363449, 51.9497169]
+      }
+    },
 }
 
 @app.route("/")
