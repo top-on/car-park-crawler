@@ -1,5 +1,8 @@
 from flask import Flask, Response
-import re, json, requests, datetime
+import re
+import json
+import requests
+import datetime
 
 app = Flask(__name__)
 
@@ -148,6 +151,12 @@ def scrape():
             yield json.dumps(geojson, ensure_ascii=False) + '\n'
 
     return Response(geojson_lines(), mimetype='application/json')
+
+@app.route("/healthz")
+def healthz():
+    return "OK"
+    # return Response(status=200)
+    # return Response(status=204)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
