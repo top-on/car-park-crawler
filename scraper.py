@@ -46,6 +46,8 @@ def scrape():
                 'free': int(free)
             })
 
+            # FIXME add `coordinates_point` derived from geo_shape if missing
+
             yield json.dumps(geojson, ensure_ascii=False) + '\n'
 
     app.logger.info("Sending out scraped data as geojson..")

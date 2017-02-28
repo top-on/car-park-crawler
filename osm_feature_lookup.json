@@ -10,7 +10,7 @@
       "capacity:women": 46,
       "name": "Theaterparkhaus",
       "parking": "underground",
-      "toilets:wheelchair": "yes",
+      "toilets:wheelchair": true,
       "website": "http://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/1.html"
     },
     "geometry": {
@@ -25,11 +25,11 @@
       "@id": "node/409003589",
       "amenity": "parking",
       "capacity": 700,
-      "fee": "yes",
+      "fee": true,
       "name": "Parkhaus Münster Arkaden",
       "parking": "underground",
       "website": "http://www.stadt-muenster.de/parkhaeuser/",
-      "wheelchair": "yes"
+      "wheelchair": true
     },
     "geometry": {
       "type": "Point",
@@ -43,11 +43,11 @@
       "@id": "node/496190360",
       "amenity": "parking",
       "capacity": 183,
-      "fee": "yes",
+      "fee": true,
       "name": "Parkhaus Karstadt",
       "parking": "underground",
       "website": "http://www.stadt-muenster.de/parkhaeuser/",
-      "wheelchair": "yes"
+      "wheelchair": true
     },
     "geometry": {
       "type": "Point",
@@ -62,7 +62,7 @@
       "amenity": "parking",
       "capacity": 339,
       "capacity:disabled": 10,
-      "fee": "yes",
+      "fee": true,
       "name": "Parkhaus Bahnhofstraße",
       "parking": "multi-storey",
       "website": "http://www.stadt-muenster.de/parkhaeuser/"
@@ -81,12 +81,12 @@
       "addr:housenumber": "10",
       "addr:street": "Lippstädter Straße",
       "amenity": "parking",
-      "building": "yes",
+      "building": true,
       "building:levels": 7,
       "capacity": 590,
-      "capacity:disabled": "yes",
-      "fee": "yes",
-      "lit": "yes",
+      "capacity:disabled": true,
+      "fee": true,
+      "lit": true,
       "maxheight": 2,
       "name": "Parkhaus Cineplex",
       "opening_hours": "24/7",
@@ -94,7 +94,7 @@
       "parking": "multi-storey",
       "surface": "asphalt",
       "website": "http://www.stadt-muenster.de/tiefbauamt/parkleitsystem/",
-      "wheelchair": "yes"
+      "wheelchair": true
     },
     "geometry": {
       "type": "Point",

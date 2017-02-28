@@ -1,0 +1,93 @@
+{
+  "mappings": {
+    "space":
+    {
+      "properties": {
+        "@id": {
+          "type": "text"
+        },
+        "access": {
+          "type": "keyword"
+        },
+        "addr:housenumber": {
+          "type": "text"
+        },
+        "addr:street": {
+          "type": "text"
+        },
+        "amenity": {
+          "type": "keyword"
+        },
+        "building": {
+          "type": "boolean"
+        },
+        "building:levels": {
+          "type": "integer"
+        },
+        "capacity": {
+          "type": "integer"
+        },
+        "capacity:disabled": {
+          "type": "integer"
+        },
+        "capacity:women": {
+          "type": "integer"
+        },
+        "coordinates": {
+          "type": "geo_shape"
+        },
+        "coordinates_point": {
+          "type": "geo_point"
+        },
+        "fee": {
+          "type": "boolean"
+        },
+        "free": {
+          "type": "integer"
+        },
+        "lit": {
+          "type": "boolean"
+        },
+        "maxheight": {
+          "type": "long"
+        },
+        "name": {
+          "type": "text"
+        },
+        "opening_hours": {
+          "type": "text"
+        },
+        "operator": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "parking": {
+          "type": "keyword"
+        },
+        "surface": {
+          "type": "keyword"
+        },
+        "timestamp": {
+          "type": "date"
+        },
+        "toilets:wheelchair": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "keyword"
+        },
+        "website": {
+          "type": "text"
+        },
+        "wheelchair": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
