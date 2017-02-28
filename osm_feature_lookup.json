@@ -84,7 +84,7 @@
       "building": true,
       "building:levels": 7,
       "capacity": 590,
-      "capacity:disabled": true,
+      "capacity:disabled": 0,
       "fee": true,
       "lit": true,
       "maxheight": 2,
