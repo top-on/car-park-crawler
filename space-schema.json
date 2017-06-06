@@ -4,7 +4,13 @@
     {
       "properties": {
         "@id": {
-          "type": "text"
+          "type": "keyword",
+          "ignore_above": 256,
+          "fields": {
+            "text": {
+              "type": "text"
+            }
+          }
         },
         "access": {
           "type": "keyword"
@@ -33,10 +39,10 @@
         "capacity:women": {
           "type": "integer"
         },
-        "coordinates": {
+        "geometry": {
           "type": "geo_shape"
         },
-        "coordinates_point": {
+        "geometry_point": {
           "type": "geo_point"
         },
         "fee": {
@@ -52,7 +58,13 @@
           "type": "long"
         },
         "name": {
-          "type": "text"
+          "type": "keyword",
+          "ignore_above": 256,
+          "fields": {
+            "text": {
+              "type": "text"
+            }
+          }
         },
         "opening_hours": {
           "type": "text"
