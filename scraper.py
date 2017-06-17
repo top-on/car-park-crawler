@@ -4,6 +4,7 @@ import json
 import requests
 import datetime
 from minio import Minio
+import minio.error
 import logging
 
 app = Flask(__name__)
@@ -63,7 +64,7 @@ def scrape():
                 hashid = hashlib.md5(json.dumps(geojson, sort_keys=True)).hexdigest()
                 minioClient.put_object('parkleit', hashid, geojson,
                                        len(geojson), content_type='application/json')
-            except ResponseError as err:
+            except minio.error.ResponseError as err:
                 app.logger.error(err)
 
             yield json.dumps(geojson, ensure_ascii=False) + '\n'
