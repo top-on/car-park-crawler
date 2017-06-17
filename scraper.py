@@ -17,8 +17,8 @@ app.logger.addHandler(stream_handler)
 
 minioClient = Minio('minio.minio.svc:9000',
                     access_key='minio',
-                    secret_key='minio123')
-                    # secure=True)
+                    secret_key='minio123',
+                    secure=False)
 
 try:
     minioClient.make_bucket("parkleit")
