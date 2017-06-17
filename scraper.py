@@ -6,6 +6,7 @@ import datetime
 from minio import Minio
 import minio.error
 import logging
+import hashlib
 
 app = Flask(__name__)
 
