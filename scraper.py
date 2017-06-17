@@ -65,8 +65,8 @@ def scrape():
 
             try:
                 hashid = hashlib.md5(json.dumps(geojson, sort_keys=True).encode('utf-8')).hexdigest()
-                minioClient.put_object('parkleit', hashid, geojson,
-                                       len(geojson), content_type='application/json')
+                minioClient.put_object('parkleit', hashid, json.dumps(geojson),
+                                       len(json.dumps(geojson)), content_type='application/json')
             except minio.error.ResponseError as err:
                 app.logger.error(err)
 
