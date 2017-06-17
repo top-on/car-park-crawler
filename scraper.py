@@ -22,10 +22,14 @@ minioClient = Minio('minio.minio.svc:9000',
                     secure=False)
 
 try:
-    minioClient.make_bucket("parkleit")
+        minioClient.make_bucket("parkleit")
+except minio.error.BucketAlreadyOwnedByYou as err:
+        pass
+except minio.error.BucketAlreadyExists as err:
+        pass
 except minio.error.ResponseError as err:
-    app.logger.error(err)
-
+        app.logger.error(err)
+        raise
 
 default = {
   "type": "Feature",
