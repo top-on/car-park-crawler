@@ -22,11 +22,9 @@ minioClient = Minio('minio.minio.svc:9000',
 
 try:
     minioClient.make_bucket("parkleit")
-except ResponseError as err:
-    print(err)
+except minio.error.ResponseError as err:
+    app.logger.error(err)
 
-
-# FIXME use default-dict
 
 default = {
   "type": "Feature",
