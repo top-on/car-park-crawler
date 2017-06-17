@@ -64,7 +64,7 @@ def scrape():
             # FIXME add `coordinates_point` derived from geo_shape if missing
 
             try:
-                hashid = hashlib.md5(json.dumps(geojson, sort_keys=True)).hexdigest()
+                hashid = hashlib.md5(json.dumps(geojson, sort_keys=True).encode('utf-8')).hexdigest()
                 minioClient.put_object('parkleit', hashid, geojson,
                                        len(geojson), content_type='application/json')
             except minio.error.ResponseError as err:
