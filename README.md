@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/thorbenjensen/car-park-crawler/badge.svg)](https://snyk.io/test/github/thorbenjensen/car-park-crawler)
+
 parkleitsystemCrawler
 ===
 Crawls currently available parking spots in the public car parks in Muenster.
